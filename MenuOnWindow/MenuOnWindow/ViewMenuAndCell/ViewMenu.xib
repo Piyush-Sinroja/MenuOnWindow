@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ViewMenu" id="iN0-l3-epB" customClass="ViewMenu" customModule="MenuOnWindow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eM7-3P-f9C">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UK9-bn-Y8r">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="7Vs-Zh-S4d"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="fGi-To-ANl"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="UK9-bn-Y8r" secondAttribute="bottom" id="0Ye-9C-eT0"/>
+                        <constraint firstItem="UK9-bn-Y8r" firstAttribute="leading" secondItem="eM7-3P-f9C" secondAttribute="leading" id="3m6-fr-KIv"/>
+                        <constraint firstAttribute="trailing" secondItem="UK9-bn-Y8r" secondAttribute="trailing" id="Ysd-cR-8Pa"/>
+                        <constraint firstItem="UK9-bn-Y8r" firstAttribute="top" secondItem="eM7-3P-f9C" secondAttribute="top" id="kaP-Ms-8zZ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eM7-3P-f9C" secondAttribute="trailing" id="ZiL-Mr-Zit"/>
+                <constraint firstItem="eM7-3P-f9C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dZR-3l-Q1X"/>
+                <constraint firstItem="eM7-3P-f9C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kRy-eT-hMv"/>
+                <constraint firstAttribute="bottom" secondItem="eM7-3P-f9C" secondAttribute="bottom" id="krT-Zf-9Pn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tblMenu" destination="UK9-bn-Y8r" id="zqI-Jd-QBu"/>
+                <outlet property="viewTbl" destination="eM7-3P-f9C" id="qke-cR-OD8"/>
+            </connections>
+        </view>
+    </objects>
+</document>
