@@ -13,7 +13,7 @@ class Appdelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var navController = UINavigationController()
-    let menuObj : MenuOnWindow = MenuOnWindow()
+    var menuObj : MenuOnWindow?
 
     //MARK:- Application LifeCycle
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -24,8 +24,8 @@ class Appdelegate: UIResponder, UIApplicationDelegate {
         navController = UINavigationController(rootViewController: viewobj)
         window!.rootViewController = navController
         window!.makeKeyAndVisible()
-        
-        menuObj.loadNewView(window: window!,navigation: navController)
+        menuObj = MenuOnWindow()
+        menuObj?.loadNewView(window: window!,navigation: navController)
         return true
     }
     
